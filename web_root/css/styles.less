@@ -78,41 +78,41 @@
 // Fonts
 //
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 200;
-  src: local('Roboto Thin'), local('Roboto-Thin'), url(//fonts.gstatic.com/s/roboto/v15/Jzo62I39jc0gQRrbndN6nfesZW2xOQ-xsNqO47m55DA.ttf) format('truetype');
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 200;
+		src: local('Roboto Thin'), local('Roboto-Thin'), url(//fonts.gstatic.com/s/roboto/v15/Jzo62I39jc0gQRrbndN6nfesZW2xOQ-xsNqO47m55DA.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Roboto Light'), local('Roboto-Light'), url(//fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 300;
+		src: local('Roboto Light'), local('Roboto-Light'), url(//fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'), url(//fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf) format('truetype');
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 400;
+		src: local('Roboto'), local('Roboto-Regular'), url(//fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Roboto Medium'), local('Roboto-Medium'), url(//fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 500;
+		src: local('Roboto Medium'), local('Roboto-Medium'), url(//fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'), url(//fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 700;
+		src: local('Roboto Bold'), local('Roboto-Bold'), url(//fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
 }
 
 @font-face {
-  font-family: 'Permanent Marker';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Permanent Marker'), local('PermanentMarker'), url(//fonts.gstatic.com/s/permanentmarker/v5/9vYsg5VgPHKK8SXYbf3sMrg27BfaRSB61e9iDGqjWqk.ttf) format('truetype');
+		font-family: 'Permanent Marker';
+		font-style: normal;
+		font-weight: 400;
+		src: local('Permanent Marker'), local('PermanentMarker'), url(//fonts.gstatic.com/s/permanentmarker/v5/9vYsg5VgPHKK8SXYbf3sMrg27BfaRSB61e9iDGqjWqk.ttf) format('truetype');
 }
 
 //
@@ -137,7 +137,7 @@
 @acc-number-height: 31px; 
 @acc-number-padding-top: 9px;
 @acc-number-padding-left: 18px;
-	
+
 @acc-title-float: left;
 @acc-title-padding-left: 20px;
 @acc-title-padding-top: 9px;
@@ -264,7 +264,7 @@ option {
 .level-a1 {
 		background-color: @level-a1;
 }
-       
+
 .level-a2 {
     background-color: @level-a2;
 }
@@ -321,6 +321,8 @@ img.icon {
 
 
 .uk-button, button {
+		margin-top: 0.3em;
+		margin-bottom: 0.3em;
 		small {
 				margin-left: 0.5em;
 		}
@@ -330,7 +332,7 @@ img.icon {
 //
 // Hintergrund/bild eingeloggt
 //
- 
+
 body.loggedIn {
 		div.core {
 				background-color: white;
@@ -351,7 +353,7 @@ div.moduleCard {
 				padding: @pad @pad 0.2em @pad;
 
 				div.title {
-//						text-transform: uppercase;
+						//						text-transform: uppercase;
 				}
 
 				span.level-badge {
@@ -504,63 +506,6 @@ div.moduleCard {
 
 
 
-//
-// ModuleExerciser
-//
-// OPTIMIZE into VIATduModuleExerciser
-div.VIAModuleExerciser {
-
-		padding-left: 0.5em;
-		padding-right: 0.5em;
-
-		// 
-		// Titel besser
-		//
-		h2.moduleTitle {
-				padding:5px 5px 5px 5px;
-				background-color: #fff;
-				border-bottom: 1px solid #F00;
-				font-weight: 200;
-				font-size: 2em;
-
-				span.level-badge {
-						width: 50px;
-						height: 50px;
-						padding: 5px;
-				}
-
-				span.rating {
-						float: right;
-				}
-		}
-
-		div.moduleMenu {
-				div.rating {
-						a.noRating {
-								color: @global-muted-color;
-						}
-				}
-		}
-
-		div.hiddenTaskExercise {
-				position: absolute !important;
-				top: -9999px !important;
-				left: -9999px !important;
-				width: 100%; // TODO: Smarter, aber ich fand nicht heraus, wo die Breite drin steht. Wir brauchen aber eine feste Breite, damit die Berechnung per JS OK ist
-				visibility: hidden;
-		}
-
-		
-		div.moduleFootnotes {
-				margin-top: 20px;
-				border: 1px solid #ddd;
-				padding: 5px;
-		}
-
-		div.teacherNotes {
-				.uk-hidden();
-		}
-}
 
 
 
@@ -1119,7 +1064,7 @@ div.exercise {
 
 
 		div.audioPlayer {
-//				width: 50%;
+				//				width: 50%;
 				margin: 10px 0px;
 				span.assetInfo {
 						float: right;
@@ -1319,16 +1264,16 @@ div.highlightAreas {
 
 		.noUserSelect();
 		.noTouch();
-//		cursor: url('/files/images/horizontal-text-select.cur'), default;
+		//		cursor: url('/files/images/horizontal-text-select.cur'), default;
 		//		font-size: 120%;
 		letter-spacing: 0.1em;
-//Nicht, hinterlässt weisse verratene Lücken beim Markieren		word-spacing: 0.1em;
+		//Nicht, hinterlässt weisse verratene Lücken beim Markieren		word-spacing: 0.1em;
 		padding: 10px;
 		margin: 15px 0;
 		border: 1px solid #aaa;
 
 		span.highlightArea.solution {
-//				background-color: #ddd;
+				//				background-color: #ddd;
 				border: 1px solid #333;
 				padding-left: 1px;
 		}
@@ -1340,7 +1285,7 @@ div.highlightAreas {
 		// Version 2 ==========================
 		span.selChar {
 				cursor: url('/images/horizontal-text-select.cur'), text;
-//				cursor: text;
+				//				cursor: text;
 				&.highlighted {
 						background-color: green;
 						color: white;
@@ -1353,24 +1298,24 @@ div.highlightAreas {
 		
 
 		// Version 1 =========================
-// 		::selection {
-// 				// background-color: #ddd;
-// 				// color: red;
-// 				background-color: green;
-// 				color: white;
-// 		}
+		// 		::selection {
+		// 				// background-color: #ddd;
+		// 				// color: red;
+		// 				background-color: green;
+		// 				color: white;
+		// 		}
 		
-// 		.selectedText { // , ::selection
-// 				// Nicht, weil das die Fragmente sichtbar macht &:hover {
-// 				// 		background-color: #ada;
-// 				// }
-				
-// 				background-color: green;
-// 				color: white;
-// //				cursor: pointer;
-// 				cursor: url('/files/images/selection-remove.cur'), default;
-// 				padding-top: 1px;
-// 		}
+		// 		.selectedText { // , ::selection
+		// 				// Nicht, weil das die Fragmente sichtbar macht &:hover {
+		// 				// 		background-color: #ada;
+		// 				// }
+		
+		// 				background-color: green;
+		// 				color: white;
+		// //				cursor: pointer;
+		// 				cursor: url('/files/images/selection-remove.cur'), default;
+		// 				padding-top: 1px;
+		// 		}
 
 }
 
@@ -1588,20 +1533,32 @@ div.tdu-header {
 						// Login Menu, Facebook-Vorgaben
 						li.loginMenu {
 								ul.loginMenu {
+										background-color: #f6f6f6;
+										padding: 5px;
+
+										a {
+												&:hover {
+														color: @base-link-color;
+												}
+												color: #333;
+
+												.icon {
+														width: 20px;
+												}
+										}
+										
 										li.facebookLogin, li.googleLogin {
-												//				background-color: @facebook-blue;
-												padding-left: 2px;
-												background-color: #f6f6f6;
+												// padding-left: 2px;
+												// background-color: #f6f6f6;
 
 												a.facebookLogin, a.googleLogin {
-														&:hover {
-																color: @base-link-color;
-														}
-														color: #333;
+														// &:hover {
+														// 		color: @base-link-color;
+														// }
+														// color: #333;
 
 														img.facebookLogo {
 																width: 20px;
-																//						margin: 2px;
 														}
 
 														img.googleLogo {
@@ -1707,7 +1664,7 @@ nav.tdu-navbar {
 // ModuleExerciser
 //
 div.VIATduModuleExerciser {
-
+		
 		padding-left: 0.5em;
 		padding-right: 0.5em;
 
@@ -1732,34 +1689,35 @@ div.VIATduModuleExerciser {
 				}
 		}
 
-
-		div.swissgermanToolbox {
-				margin-bottom: 5px;
+		div.moduleMenu {
+				div.rating {
+						a.noRating {
+								color: @global-muted-color;
+						}
+				}
 		}
 
 		div.hiddenTaskExercise {
-				// Nicht display:none, weil das Berechnungen mit Breite etc. nicht möglich macht
-				
-				// height: 0px;
-				// visibility: hidden;
-				// overflow: hidden;
-
-				// position: absolute; 
-				// overflow: hidden; 
-				// clip: rect(0 0 0 0); 
-				// height: 1px; width: 1px; 
-				// margin: -1px; padding: 0; border: 0; 
-
-				
 				position: absolute !important;
 				top: -9999px !important;
 				left: -9999px !important;
 				width: 100%; // TODO: Smarter, aber ich fand nicht heraus, wo die Breite drin steht. Wir brauchen aber eine feste Breite, damit die Berechnung per JS OK ist
 				visibility: hidden;
-				
-				// div.VIAExerciserComponent {
-				// 		height: 0px;
-				// }
+		}
+
+		
+		div.moduleFootnotes {
+				margin-top: 20px;
+				border: 1px solid #ddd;
+				padding: 5px;
+		}
+
+		div.teacherNotes {
+				.uk-hidden();
+		}
+
+		div.swissgermanToolbox {
+				margin-bottom: 5px;
 		}
 
 		
@@ -1768,7 +1726,7 @@ div.VIATduModuleExerciser {
 				
 				margin-top: 10px;
 				margin-bottom: 20px;
-//				padding-left: 1em;
+				//				padding-left: 1em;
 
 				// Should all be onliners
 				// > div {
@@ -1788,7 +1746,7 @@ div.VIATduModuleExerciser {
 						line-height: 0.9em;
 						padding: 3px;
 						margin: 2px 0 4px @indent;
-//						background-color: #eee;
+						//						background-color: #eee;
 						color: #999;
 						word-break: break-all;
 						
@@ -1810,16 +1768,6 @@ div.VIATduModuleExerciser {
 				
 		}
 		
-		div.moduleFootnotes {
-				margin-top: 20px;
-				border: 1px solid #ddd;
-				padding: 5px;
-		}
-
-		div.teacherNotes {
-				.uk-hidden();
-		}
-
 
 		
 }
@@ -1895,7 +1843,7 @@ div.VIAMyPortfolioComponent {
 @media (min-width: @breakpoint-small) {
 
 		div.coreContainer {
-//				padding-top: 1em;
+				//				padding-top: 1em;
 				// padding-left: 2em;
 				// padding-right: 2em;
 		}
@@ -1918,6 +1866,7 @@ div.VIAMyPortfolioComponent {
 		}
 
 		div.VIATduModuleExerciser {
+				.uk-container();
 				div.moduleDetails {
 						padding-left: 1em;
 				}
