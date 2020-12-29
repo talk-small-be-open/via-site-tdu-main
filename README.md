@@ -4,11 +4,11 @@ This is the main site specific repository for the 321*.ch projects based on the 
 
 The Smalltalk source code is held in a separate repository:
 
-[via-tdu-src](via-tdu-src)
+https://github.com/talk-small-be-open/via-base-src
 
 # Requirements: VIA code base
 
 The repositories for the code base are
 
-[via-base-main](via-base-main)
-[via-base-src](via-base-src)
+https://github.com/talk-small-be-open/via-site-tdu-main
+https://github.com/talk-small-be-open/via-site-tdu-src
