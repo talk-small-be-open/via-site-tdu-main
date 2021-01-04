@@ -1,0 +1,40 @@
+// Styles für 321 portal
+
+// Import 321 main styles
+@import "common.less";
+//@import "styles.less";
+
+// Colors
+@tdu-language-color: none;
+
+@global-primary-background: @tdu-language-color-fr;
+
+
+// @tdu-coloredbutton-color: #555; // darken(@global-primary-background, 15%);
+// @tdu-coloredbutton-hover-color: darken(@tdu-coloredbutton-color, 10%);
+
+
+div.VIAMainPortalComponent {
+		@pad: 1em;
+		div.website-321via {
+				padding: @pad;
+				background-color: @tdu-language-color-it;
+		}
+		div.website-321partez {
+				padding: @pad;
+				background-color: @tdu-language-color-fr;
+		}
+		div.website-321los {
+				padding: @pad;
+				background-color: @tdu-language-color-de;
+		}
+
+		div.logoContainer {
+				background-color: white;
+		}
+}
+
+// Emacs!! Am Ende der Datei stehen lassen!
+// Local Variables:
+// less-css-compile-at-save: t
+// End:

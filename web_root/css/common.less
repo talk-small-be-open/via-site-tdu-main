@@ -1,0 +1,64 @@
+// Import via main styles
+@import "../../base/web_root/css/styles.less";
+
+// Our SITE own uikit theme (overrides to the via base uikit theme)
+@import "uikit_theme/_import.less";
+
+@tdu-language-color-it: #e20613;
+@tdu-language-color-fr: #77adce;
+@tdu-language-color-de: #f5c400;
+
+
+//
+// footer
+// 
+
+@footer-background:                                 @global-primary-background;
+@footer-color:                                      #fff;
+@footer-padding:                                    12px;
+@footer-min-height:                                 40px;
+@footer-margin-top:                                 25px;
+
+div.footer {
+    background-color: @footer-background;
+    color: @footer-color;
+    min-height: @footer-min-height;
+    margin-top: @footer-margin-top;
+
+		// position: fixed;
+		// z-index: 15;
+		// bottom: 0;
+		width: 100%;
+		padding: 0.2em 1em;
+		box-sizing: border-box;
+		
+		.footnotes {
+				//				padding: @footer-padding;
+				margin: auto 0;
+		}
+
+		a {
+				color: inherit;
+		}
+
+		img.supporterLogo {
+				height: @footer-min-height;
+				margin: 0.2em 1em 0.2em 0;
+		}
+		
+		.awards {
+				// position: absolute;
+				// right: 0;
+				// padding: @footer-padding;
+				
+				img.award {
+						height: @footer-min-height / 1.7;
+						filter: grayscale(100%);
+
+						&:hover {
+								filter: grayscale(0%);
+						}
+				}
+		}
+    
+}
