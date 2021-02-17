@@ -5,32 +5,324 @@
 //@import "styles.less";
 
 // Colors
-@tdu-language-color: none;
+@tdu-language-color: transparent;
 
 @global-primary-background: @tdu-language-color-fr;
 
+@waveHeight: 120px;
 
 // @tdu-coloredbutton-color: #555; // darken(@global-primary-background, 15%);
 // @tdu-coloredbutton-hover-color: darken(@tdu-coloredbutton-color, 10%);
 
+body {
+		font-family: 'Nunito Sans', sans-serif;
+}
+
+&.italian {
+		font-weight: bold;
+}
+
+&.french {
+		font-style: italic;
+}
+
+&.german {
+		//								font-variant: italic;
+}
 
 div.VIAMainPortalComponent {
 		@pad: 1em;
-		div.website-321via {
-				padding: @pad;
-				background-color: @tdu-language-color-it;
-		}
-		div.website-321partez {
-				padding: @pad;
-				background-color: @tdu-language-color-fr;
-		}
-		div.website-321los {
-				padding: @pad;
-				background-color: @tdu-language-color-de;
-		}
 
 		div.logoContainer {
 				background-color: white;
+		}
+
+		div.header {
+				background-color: @tdu-language-color-it;
+				position: relative;
+				height: 3em;
+
+				img.portalLogo {
+						position: absolute;
+						width: 8em;
+						top: 1em;
+						left: 4em;
+				}
+
+				span.menu {
+						float: right;
+						padding-top: 0.8em;
+						
+						a {
+								color: white;
+								font-size: 150%;
+								font-weight: bold;
+								margin-right: 1em;
+						}
+				}
+		}
+
+		div.part {
+				// overlap with next clipped border
+//				padding-bottom: 31px;
+				margin-bottom: -@waveHeight;
+
+				div.body {
+						padding-bottom: @waveHeight;
+						padding-left: 5%;
+						padding-right: 5%;
+
+						h1 {
+								margin-bottom: 1em;
+
+								span + span {
+										margin-left: 0.5em;
+								}
+						}
+				}
+		}
+		
+		div.redirects {
+				// Background verlauf
+				background: radial-gradient(ellipse at 10% 45%, @tdu-language-color-fr, fadeout(@tdu-language-color-fr, 5%) 10%, fadeout(@tdu-language-color-fr, 80%) 30%, fadeout(@tdu-language-color-fr, 95%) 40%, transparent 50%),
+										radial-gradient(circle at 5% 90%, @tdu-language-color-it, fadeout(@tdu-language-color-it, 80%) 30%, transparent 40%),
+										radial-gradient(circle at 95% 50%, @tdu-language-color-de, fadeout(@tdu-language-color-de, 80%) 30%, transparent 70%),
+										white;
+
+				padding-top: 10em;
+
+				div.callForAction {
+						height: 15em;
+				}
+
+				div.website-321via {
+						div.callForAction {
+								div.messageBox {
+										border-color: @tdu-language-color-it;
+								}
+						}
+				}
+				div.website-321partez {
+						div.callForAction {
+								div.messageBox {
+										border-color: @tdu-language-color-fr;
+								}
+						}
+				}
+				div.website-321los {
+						div.callForAction {
+								div.messageBox {
+										border-color: @tdu-language-color-de;
+								}
+						}
+				}
+
+
+		}
+		
+		div.projectInfo {
+				.waveBorder('#svgPathClip2', @waveHeight, @tdu-language-color-de);
+				div.body {
+						background-color: @tdu-language-color-de;
+				}
+		}
+
+		div.examples {
+				.waveBorder('#svgPathClip3', @waveHeight, white);
+				div.body {
+						background-color: white;
+				}
+
+				//
+				// module design
+				//
+				div.moduleCard {
+						@iconkachel-groesse:    24px;
+
+
+						&.normal {
+								@pad: 1.5em;
+								padding: @pad @pad 0.5em @pad;
+								
+								span.level-badge {
+										right: @pad * 1.1;
+										top: @pad * 1.1;
+										border: 2px solid;
+								}
+
+								span.exam-badge {
+										right: @pad * 1.1;
+										top: @pad * 3.1;
+										border: 2px solid;
+								}
+						}
+		
+						.badge-in-card() {
+								position: absolute;
+								vertical-align: text-bottom;
+								text-align: center;
+								width: 30px;
+								height: 30px;
+						}
+		
+						span.level-badge {
+								.badge-in-card();
+						}		
+
+
+						.tdu-angaben-box {
+								img.tdu-kuchen {
+										width: @iconkachel-groesse; 
+										padding-right: 10px;
+										background-color: none;
+								}
+
+								ul.activityTypeTags {
+										margin: 0;
+										padding: 0;
+										list-style-type: none;
+										display: inline-block;
+
+										li {
+												display: inline-block;
+												margin-right: 3px;
+
+												+ li {
+														border-left: 1px solid black;
+														padding-left: 3px;
+												}
+												
+												span.activityTypeCount {
+														font-weight: bold;
+														color: black;
+												}
+												
+												img.iconActivityType {
+														width:     @iconkachel-groesse;
+														height:    @iconkachel-groesse;
+												}
+										}
+								}
+						}
+
+
+
+
+						div.tdu-titel-box {
+								font-size: 120%;
+								text-transform: uppercase;
+								color: #fff;
+								padding: 10px 0px 9px 0px;
+								min-height: 2em;
+						}
+
+						div.tdu-tags {
+								margin-top: 15px;
+								padding-top: 4px;
+								border-top: 1px dotted #fff;
+								color:  #fff;
+								font-size: 0.8em;
+								line-height: 1.3em;
+								height: 4em;
+								overflow: hidden;
+						}
+
+		
+				}
+
+
+		}
+
+		div.map {
+				.waveBorder('#svgPathClip4', @waveHeight, #F2F2F2);
+				div.body {
+						background-color: #F2F2F2;
+				}
+		}
+
+		div.patronage {
+				.waveBorder('#svgPathClip5', @waveHeight, @tdu-language-color-fr);
+				div.body {
+						background-color: @tdu-language-color-fr;
+				}
+		}
+
+		div.footer {
+				.waveBorder('#svgPathClip6', @waveHeight, white);
+				div.body {
+						background-color: white;
+				}
+
+				div.logos {
+						// display: flex;
+						// justify-content: space-between;
+						// align-items: flex-start;
+
+						img.supporterLogo {
+								
+								// &.bak {
+								// 		width: 20em;
+								// }
+
+								// &.tv {
+								// 		width: 10em;
+								// }
+						}
+						
+				}
+
+				div.footnotes {
+						margin-top: 5em;
+				}
+		}
+
+		div.multiLanguageSection {
+				div.multiLanguagePart {
+						margin-top: 2em;
+						margin-bottom: 2em;						
+				}
+		}
+		
+}
+
+
+// Only small phones
+@media (max-width: @breakpoint-small) {
+
+		div.VIAMainPortalComponent {
+//				@waveHeight: 120px;
+
+				h1 {
+						font-size: 2rem;
+				}
+				
+				div.header {
+						img.portalLogo {
+								width: 4em;
+								left: 1em;
+								top: 1em;
+						}
+				}
+
+				div.part {
+						.waveBorder {
+								height: @waveHeight / 3;
+						}
+						div.body {
+								padding-left: 0;
+								padding-right: 0;
+						}
+				}
+
+				div.redirects {
+
+						padding-top: 2em;
+
+						div.callForAction {
+								height: 10em;
+						}
+						
+				}
 		}
 }
 

@@ -1,4 +1,4 @@
-// 321-wide styles
+// 321-wide styles, excluding portal
 
 @import "../../base/web_root/css/outofthebox/tandem_sequence.less";
 @tandem-color-player1: orange;
@@ -6,16 +6,6 @@
 
 @import "common.less";
 
-// 
-// Colors language levels
-//
-
-@level-a1:       #00cc67;    
-@level-a2:       #3399cc;
-@level-b1:       #cc6699;
-@level-b2:       #cccc66;
-@level-c1:       #bcb6a5;
-@level-c2:       #a8b3d3;
 
 
 
@@ -26,35 +16,6 @@
 
 @tdu-header-shadow-sticky:                           0 0 50px 1px rgba(0,0,0,0.2);
 @tdu-header-shadow-teaser:                           0 0 150px 1px rgba(0,0,0,0.5);
-
-
-// .level-badge {
-// 		-webkit-border-radius: 55px;
-// 		-moz-border-radius: 55px;
-// 		border-radius: 55px;
-//     // color: #fff !important;
-//     // line-height: 2em;
-//     font-weight: bold;
-//     color: @level-badge-boxen-fontcolor;
-//     line-height: @level-badge-boxen-line-height;
-//     text-align: center;		
-// }
-
-// .uk-button {
-// 		&.level-a1, &.level-a2, &.level-b1, &.level-b2, &.level-c1, &.level-c2 {
-// 				.level-badge();																																		 
-// 				margin: 0.3em;
-// 				width: 50px;
-// 				height: 50px;
-// 				padding: 0;
-// 				text-align: center;
-
-// 				&.selected,
-// 				&:hover {
-// 						border: 6px solid white;
-// 				}
-// 		}
-// }
 
 
 
@@ -68,6 +29,8 @@
 //
 // Fonts
 //
+
+
 @font-face {
 		font-family: 'Roboto';
 		font-style: normal;
@@ -148,8 +111,6 @@
 
 
 
-@level-badge-boxen-fontcolor: #fff;
-@level-badge-boxen-line-height: 2em;
 
 
 //
@@ -240,41 +201,8 @@ option {
 }
 
 
-// Colors for language levels
-.level-a1 {
-		background-color: @level-a1;
-}
-
-.level-a2 {
-    background-color: @level-a2;
-}
-
-.level-b1 {
-    background-color: @level-b1;
-}
-
-.level-b2 {
-    background-color: @level-b2;
-}
-
-.level-c1 {
-    background-color: @level-c1;
-}
-
-.level-c2 {
-    background-color: @level-c2;
-}
 
 
-.level-badge {
-		-webkit-border-radius: 55px;
-		-moz-border-radius: 55px;
-		border-radius: 55px;
-    font-weight: bold;
-    color: @level-badge-boxen-fontcolor;
-    line-height: @level-badge-boxen-line-height;
-    text-align: center;		
-}
 
 .uk-button {
 		&.level-a1, &.level-a2, &.level-b1, &.level-b2, &.level-c1, &.level-c2 {
@@ -493,7 +421,7 @@ div.coreContainer {
 
 		div.core {
 				@pad: 0.5em;
-				padding: @pad;
+				padding: 0 @pad @pad @pad;
 
 				.expandToCore {
 						margin-left: -@pad;
@@ -1791,6 +1719,67 @@ div.VIAMyPortfolioComponent {
 
 
 
+//
+// Home
+//
+div.VIAPublicHomeComponent {
+		div#award {
+				position: absolute;
+		}
+
+		div.sisterSites {
+				margin: 0 30% 0 0;
+				text-align: right;
+
+				a {
+						color: white;
+						padding: 2px 1em;
+						white-space: nowrap;
+
+						&:hover {
+								color: black;
+						}
+						&.site321partez {
+								background-color: @tdu-language-color-fr;
+						}
+						&.site321via {
+								background-color: @tdu-language-color-it;
+						}
+						&.site321los {
+								background-color: @tdu-language-color-de;
+						}
+				}
+		}
+		
+		div.jumbo {
+				position: relative;
+				
+				// a.loginButton {
+				// 		display: block;
+				// 		max-width: 20em;
+				// 		width: 75%;
+				// 		margin: (@fixed-background-height*0.6) auto 0 auto;
+				// 		font-size: 2em;
+				// 		line-height: 2em;
+				// 		background-color: rgba(50,50,50,0.7);
+				// 		border: 2px solid grey;
+				// 		color: white;
+
+				// 		&:hover {
+				// 				background-color: rgba(50,50,50,1);
+								
+				// 		}
+				// }
+
+				.waveBorder('#svgPathClip1', 60px, white);
+				div.waveBorder {
+						position: absolute;
+						bottom: 0;
+				}
+				
+		}
+
+}
 
 
 
@@ -1853,10 +1842,11 @@ div.VIAMyPortfolioComponent {
 		}
 
 		// Fixed footer
-		div.footer {
+		div.footerContainer {
 				position: fixed;
 				z-index: 15;
 				bottom: 0;
+				width: 100%;
 		}
 
 		div.coreContainer {
@@ -1873,9 +1863,9 @@ div.VIAMyPortfolioComponent {
 				background-attachment: scroll;
 		}
 
-		div.tdu-header {
-				border-bottom: 2px solid #eee;
-		}
+		// div.tdu-header {
+		// 		border-bottom: 2px solid #eee;
+		// }
 
 		.tdu-fixed-background-a,
     .tdu-fixed-background-b,
@@ -1937,33 +1927,24 @@ div.VIAMyPortfolioComponent {
 
 		}
 
+		div.VIAPublicHomeComponent {
 
-}
-
-
-div.VIAPublicHomeComponent {
-		div#award {
-				position: absolute;
-		}
-		div.jumbo {
-				a.loginButton {
-						display: block;
-						max-width: 20em;
-						width: 75%;
-						margin: (@fixed-background-height*0.6) auto 0 auto;
-						font-size: 2em;
-						line-height: 2em;
-						background-color: rgba(50,50,50,0.7);
-						border: 2px solid grey;
-						color: white;
-
-						&:hover {
-								background-color: rgba(50,50,50,1);
-								
+				div.sisterSites {
+						margin: 0 auto;
+						text-align: center;
+				}
+				
+				div.jumbo {
+						div.waveBorder {
+								height: 30px;
 						}
 				}
 		}
+		
+
 }
+
+
 
 
 // Emacs!! For development we use 321via as the reference

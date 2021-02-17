@@ -222,6 +222,7 @@ $(document).ready(function(){
 	// Lazy load von Bildern installieren
 	setLazy();
 	lazyLoad();
+// zu langsam	$(window).on('scroll', debounce(lazyLoad, 50, false));
 	$(window).on('scroll', lazyLoad);
 
 	

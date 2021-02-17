@@ -1,3 +1,5 @@
+// common for websites and portal
+
 // Import via main styles
 @import "../../base/web_root/css/styles.less";
 
@@ -8,6 +10,184 @@
 @tdu-language-color-fr: #77adce;
 @tdu-language-color-de: #f5c400;
 
+@tdu-color-rosyred: #d31b83;
+
+// 
+// Colors language levels
+//
+
+@level-a1:       #00cc67;    
+@level-a2:       #3399cc;
+@level-b1:       #cc6699;
+@level-b2:       #cccc66;
+@level-c1:       #bcb6a5;
+@level-c2:       #a8b3d3;
+
+
+@level-badge-boxen-fontcolor: #fff;
+@level-badge-boxen-line-height: 2em;
+
+
+
+// Nunito
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&display=swap');
+
+//
+// lib
+// 
+
+.clipPath(@value) {
+		clip-path: url(@value);
+		-webkit-clip-path: url(@value);
+}
+
+.waveBorder(@waveId, @height, @bgColor) {
+		.waveBorder {
+				position: relative;
+				width: 100%;
+				height: @height;
+				
+				// position: absolute;
+				// bottom: 0;
+				background-color: @bgColor;
+				.clipPath(@waveId);
+		}
+}
+
+.waveBorder(@waveId, @height, @bgColor, @gapColor) {
+		.waveBorder {
+				position: relative;
+				width: 100%;
+				height: @height;
+
+				div.upper {
+						.clipPath(@waveId);
+						position: absolute;
+						top: -3px;
+						height: @waveHeight;
+						width: 100%;
+						background-color: white;					
+				}
+
+				div.lower {
+						.clipPath(@waveId);
+						position: absolute;
+						top: 0px;
+						height: @waveHeight;
+						width: 100%;
+						background-color: @bgColor;
+				}
+		}
+}
+
+
+//
+// Styles
+//
+
+// Colors for language levels
+.level-a1 {
+		background-color: @level-a1;
+}
+
+.level-a2 {
+    background-color: @level-a2;
+}
+
+.level-b1 {
+    background-color: @level-b1;
+}
+
+.level-b2 {
+    background-color: @level-b2;
+}
+
+.level-c1 {
+    background-color: @level-c1;
+}
+
+.level-c2 {
+    background-color: @level-c2;
+}
+
+
+.level-badge {
+		-webkit-border-radius: 55px;
+		-moz-border-radius: 55px;
+		border-radius: 55px;
+    font-weight: bold;
+    color: @level-badge-boxen-fontcolor;
+    line-height: @level-badge-boxen-line-height;
+    text-align: center;		
+}
+
+
+
+
+div.callForAction {
+		@top: 4vw;
+
+		position: relative;
+		width: 67%;
+		margin: 0 auto;
+		
+		div.messageBox {
+				font-weight: 600;
+				font-size: 2vw;
+				line-height: 130%;
+				position: absolute;
+				left: 15%;
+				top: @top;
+				background-color: white;
+				border: 5px solid @tdu-language-color;
+				display: inline-block;
+				width: 67%;
+//				height: 5em;
+				padding: 0.5em 1.2em;
+				z-index: 100;
+				text-align: left;
+				box-sizing: border-box;
+
+				a.actionButton {
+						position: absolute;
+						display: inline-block;
+						padding: 0.2em 1em;
+						right: -1em;
+						bottom: -1.1em;
+						z-index: 110;
+						color: white;
+						background-color: @tdu-color-rosyred;
+						border-radius: 1em;
+						font-size: 200%;
+						font-weight: 900;
+						white-space: nowrap;
+
+						&:hover {
+								color: #eee;
+						}
+				}
+		}
+
+		img.viaSiteLogo {
+				width: 20%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 110;
+				
+		}
+
+		img.supporterLogo {
+				position: absolute;
+				left: 85%;
+				top: @top;
+				width: 25%;
+				z-index: 110;
+		}
+
+}
+
+
 
 //
 // footer
@@ -17,48 +197,139 @@
 @footer-color:                                      #fff;
 @footer-padding:                                    12px;
 @footer-min-height:                                 40px;
-@footer-margin-top:                                 25px;
+//@footer-margin-top:                                 25px;
 
-div.footer {
-    background-color: @footer-background;
-    color: @footer-color;
-    min-height: @footer-min-height;
-    margin-top: @footer-margin-top;
 
-		// position: fixed;
-		// z-index: 15;
-		// bottom: 0;
-		width: 100%;
-		padding: 0.2em 1em;
-		box-sizing: border-box;
+div.footerContainer {
+		@waveHeight: 50px;
+		@footerTotalHeight: @footer-min-height + @waveHeight;
 		
-		.footnotes {
-				//				padding: @footer-padding;
-				margin: auto 0;
-		}
+		min-height: @footerTotalHeight;
+//		background-color: @footer-background;
 
-		a {
-				color: inherit;
-		}
-
-		img.supporterLogo {
-				height: @footer-min-height;
-				margin: 0.2em 1em 0.2em 0;
-		}
+		.waveBorder('#svgPathFooter', @waveHeight, @footer-background, white);
 		
-		.awards {
-				// position: absolute;
-				// right: 0;
-				// padding: @footer-padding;
+		div.footer {
+				background-color: @footer-background;
+				color: @footer-color;
+				min-height: @footer-min-height;
+
+				// position: fixed;
+				// z-index: 15;
+				// bottom: 0;
+				width: 100%;
+//				padding: @waveHeight 1em 0.2em 1em;
+				padding: 0.2em 1em;
+				box-sizing: border-box;
+				position: relative;
 				
-				img.award {
-						height: @footer-min-height / 1.7;
-						filter: grayscale(100%);
+				.footnotes {
+						position: absolute;
+						bottom: 3px;
+						right: 3px;
 
-						&:hover {
-								filter: grayscale(0%);
+						a.portalLink {
+								// position: absolute;
+								// top: -2em;
+								img.clipLogo {
+										width: 8em;
+										vertical-align: bottom;
+										margin-left: 0.5em;
+										margin-right: 1em;
+								}
+						}
+				}
+
+				a {
+						color: inherit;
+				}
+
+				img.supporterLogo {
+						height: @footer-min-height;
+						margin: 0.2em 1em 0.2em 0;
+				}
+				
+				.awards {
+						// position: absolute;
+						// right: 0;
+						// padding: @footer-padding;
+						
+						img.award {
+								height: @footer-min-height / 1.7;
+								filter: grayscale(100%);
+
+								&:hover {
+										filter: grayscale(0%);
+								}
+						}
+				}
+		}				
+}
+
+
+
+
+// Only small phones
+@media (max-width: @breakpoint-small) {
+		div.callForAction {
+				width: 90%;
+				margin-top: 2em;
+
+				div.messageBox {
+						font-size: 1rem;
+				}
+				
+				img.supporterLogo {
+						width: 40%;
+						left: 60%;
+						top: -2em;
+				}
+		}
+
+
+		div.footerContainer {
+				@waveHeight: 25px;
+				@footerTotalHeight: @footer-min-height + @waveHeight;
+				
+				min-height: @footerTotalHeight;
+
+				div.waveBorder {
+						height: @waveHeight;
+
+						div.upper {
+								height: @waveHeight;
+						}
+
+						div.lower {
+								height: @waveHeight;
+						}
+				}
+				
+				div.footer {
+						
+						.footnotes {
+								margin-top: 2em;
+								position: static;
+
+								a.portalLink {
+										img.clipLogo {
+												width: 4em;
+												//										vertical-align: bottom;
+										}
+								}
 						}
 				}
 		}
-    
+
+
 }
+
+
+
+
+// Emacs!! For development we use 321via as the reference
+// Local Variables:
+// less-css-compile-at-save: t
+// less-css-input-file-name: "styles_321via.less"
+// less-css-output-file-name: "styles_321via.css"
+// End:
