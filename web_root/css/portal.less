@@ -30,6 +30,111 @@ body {
 		//								font-variant: italic;
 }
 
+
+div.backButton {
+		margin-left: 1em;
+}
+
+//
+// module design
+//
+div.moduleCard {
+		@iconkachel-groesse:    24px;
+
+		> img { width: 100% }
+
+		&.normal {
+				@pad: 1.5em;
+				padding: @pad @pad 0.5em @pad;
+				
+				span.level-badge {
+						right: @pad * 1.1;
+						top: @pad * 1.1;
+						border: 2px solid;
+				}
+
+				span.exam-badge {
+						right: @pad * 1.1;
+						top: @pad * 3.1;
+						border: 2px solid;
+				}
+		}
+		
+		.badge-in-card() {
+				position: absolute;
+				vertical-align: text-bottom;
+				text-align: center;
+				width: 30px;
+				height: 30px;
+		}
+		
+		span.level-badge {
+				.badge-in-card();
+		}		
+
+
+		.tdu-angaben-box {
+				img.tdu-kuchen {
+						width: @iconkachel-groesse; 
+						padding-right: 10px;
+						background-color: none;
+				}
+
+				ul.activityTypeTags {
+						margin: 0;
+						padding: 0;
+						list-style-type: none;
+						display: inline-block;
+
+						li {
+								display: inline-block;
+								margin-right: 3px;
+
+								+ li {
+										border-left: 1px solid black;
+										padding-left: 3px;
+								}
+								
+								span.activityTypeCount {
+										font-weight: bold;
+										color: black;
+								}
+								
+								img.iconActivityType {
+										width:     @iconkachel-groesse;
+										height:    @iconkachel-groesse;
+								}
+						}
+				}
+		}
+
+
+
+
+		div.tdu-titel-box {
+				font-size: 120%;
+				text-transform: uppercase;
+				color: #fff;
+				padding: 10px 0px 9px 0px;
+				min-height: 2em;
+		}
+
+		div.tdu-tags {
+				margin-top: 15px;
+				padding-top: 4px;
+				border-top: 1px dotted #fff;
+				color:  #fff;
+				font-size: 0.8em;
+				line-height: 1.3em;
+				height: 4em;
+				overflow: hidden;
+		}
+
+		
+}
+
+
+
 div.VIAMainPortalComponent {
 		@pad: 1em;
 
@@ -64,7 +169,7 @@ div.VIAMainPortalComponent {
 
 		div.part {
 				// overlap with next clipped border
-//				padding-bottom: 31px;
+				//				padding-bottom: 31px;
 				margin-bottom: -@waveHeight;
 
 				div.body {
@@ -133,105 +238,6 @@ div.VIAMainPortalComponent {
 						background-color: white;
 				}
 
-				//
-				// module design
-				//
-				div.moduleCard {
-						@iconkachel-groesse:    24px;
-
-						> img { width: 100% }
-
-						&.normal {
-								@pad: 1.5em;
-								padding: @pad @pad 0.5em @pad;
-								
-								span.level-badge {
-										right: @pad * 1.1;
-										top: @pad * 1.1;
-										border: 2px solid;
-								}
-
-								span.exam-badge {
-										right: @pad * 1.1;
-										top: @pad * 3.1;
-										border: 2px solid;
-								}
-						}
-		
-						.badge-in-card() {
-								position: absolute;
-								vertical-align: text-bottom;
-								text-align: center;
-								width: 30px;
-								height: 30px;
-						}
-		
-						span.level-badge {
-								.badge-in-card();
-						}		
-
-
-						.tdu-angaben-box {
-								img.tdu-kuchen {
-										width: @iconkachel-groesse; 
-										padding-right: 10px;
-										background-color: none;
-								}
-
-								ul.activityTypeTags {
-										margin: 0;
-										padding: 0;
-										list-style-type: none;
-										display: inline-block;
-
-										li {
-												display: inline-block;
-												margin-right: 3px;
-
-												+ li {
-														border-left: 1px solid black;
-														padding-left: 3px;
-												}
-												
-												span.activityTypeCount {
-														font-weight: bold;
-														color: black;
-												}
-												
-												img.iconActivityType {
-														width:     @iconkachel-groesse;
-														height:    @iconkachel-groesse;
-												}
-										}
-								}
-						}
-
-
-
-
-						div.tdu-titel-box {
-								font-size: 120%;
-								text-transform: uppercase;
-								color: #fff;
-								padding: 10px 0px 9px 0px;
-								min-height: 2em;
-						}
-
-						div.tdu-tags {
-								margin-top: 15px;
-								padding-top: 4px;
-								border-top: 1px dotted #fff;
-								color:  #fff;
-								font-size: 0.8em;
-								line-height: 1.3em;
-								height: 4em;
-								overflow: hidden;
-						}
-
-		
-				}
-
-
 		}
 
 		div.map {
@@ -279,8 +285,28 @@ div.VIAMainPortalComponent {
 
 		div.multiLanguageSection {
 				div.multiLanguagePart {
+						position: relative;
 						margin-top: 2em;
 						margin-bottom: 2em;						
+
+						span.languageIdicator {
+								position: relative;
+								left: -0.3em;
+								//								left: -3em;
+								display: inline-block;
+								background-color: white;
+								border: 1px solid grey;
+								border-radius: 0.8em;
+								height: 1em;
+								width: 2em;
+								font-weight: bold;
+								padding: 0.1em 0.2em 0.3em 0.2em;
+								margin-bottom: 0.5em;
+								margin-right: 0.5em;
+								text-align: center;
+								vertical-align: middle;
+						}
+
 				}
 		}
 		
@@ -291,7 +317,7 @@ div.VIAMainPortalComponent {
 @media (max-width: @breakpoint-small) {
 
 		div.VIAMainPortalComponent {
-//				@waveHeight: 120px;
+				//				@waveHeight: 120px;
 
 				h1 {
 						font-size: 2rem;
