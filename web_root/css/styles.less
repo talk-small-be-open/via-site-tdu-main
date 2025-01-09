@@ -240,12 +240,29 @@ img.icon {
 // Hintergrund/bild eingeloggt
 //
 
-body.loggedIn {
-		div.core {
+body {
+		&.loggedIn {
+				//		background-color: lighten(desaturate(@global-primary-background, 30%), 110%, relative);
+				//		background-color: #eee;
+
+				// Kein Background mehr laut Sara
+				// background-image: @fixed-background-b;	
+				// -webkit-background-size: cover;
+				// -moz-background-size: cover;
+				// -o-background-size: cover;
+				// background-size: cover;
+				// background-attachment: fixed;
+
 				background-color: white;
-				min-height: 500px;
+
+				div.core {
+						//				background: rgba(255,255,255,0.8);
+						background-color: white;
+						min-height: 500px;
+				}
 		}
 }
+
 
 
 // ===================================================================================
@@ -822,6 +839,7 @@ div.exercise {
 				}
 		}
 
+
 		
 		input, select, textarea {
 				// font-family: @base-body-font-family;
@@ -1301,84 +1319,6 @@ div.VIAExamsModuleTeacherComponent {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-body {
-		&.loggedIn {
-				//		background-color: lighten(desaturate(@global-primary-background, 30%), 110%, relative);
-				//		background-color: #eee;
-
-				// Kein Background mehr laut Sara
-				// background-image: @fixed-background-b;	
-				// -webkit-background-size: cover;
-				// -moz-background-size: cover;
-				// -o-background-size: cover;
-				// background-size: cover;
-				// background-attachment: fixed;
-
-				background-color: white;
-
-				div.core {
-						//				background: rgba(255,255,255,0.8);
-						background-color: white;
-						min-height: 500px;
-				}
-		}
-}
-
-
-
-
-
 //
 // header 
 //
@@ -1786,7 +1726,14 @@ div.VIAPublicHomeComponent {
 }
 
 
+div.VIADisclaimerComponent {
+		max-width: 50vw;
 
+		.uk-accordion-title {
+				background-color: #eee;
+				cursor: pointer;
+		}
+}
 
 
 //
